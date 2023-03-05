@@ -1,0 +1,57 @@
+:root{
+    --col1 : #f70606;
+}
+body{
+    background-color: black;
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+    padding: 50px;
+    color: aliceblue;
+}
+h1{
+    font-size: 42px;
+    color:lightgreen;
+    margin-bottom: 40px;
+    text-shadow: 44px 14px 24px;
+}
+textarea{
+    /* id are used for javascript! */
+    width: 600px;
+    height: 200px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    border-color: 10px solid darkgreen;
+    margin-bottom: 40px;
+    resize: none;
+}
+#voice-select,#pitch-range,#rate-range{
+        width: 600px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding-left: 10px;
+}
+
+.rangecontainer{
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+#speak-button{
+    font-family: 'Yeseva One', cursive;
+    width: 200px;
+    height: 40px;
+    color: black;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+#speak-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px lightsalmon;
+}

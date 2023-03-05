@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Text-to-Speech Convertor!</h1>
+    <textarea  id="text-input"></textarea>
+    <br>
+    <label for="voice-select">Voice:</label>
+    <select id="voice-select">
+        <!-- <option value="num1">Voice no. 1</option>
+        <option value="num2">Voice no. 2</option>
+        <option value="num3">Voice no. 3</option> -->
+
+    </select>
+    <br><br>
+    <div class="rangecontainer">
+        <label >Pitch:</label>
+        <input type="range" min="0" max="2" step="0.1" value="1" id="pitch-range"/>
+    </div>
+    <br><br>
+    <div class="rangecontainer">
+        <label>Rate:</label>
+        <input type="range" min="0" max="2" step="0.1" value="1" id="rate-range"/>
+    </div>
+
+    <button id="speak-button">SPEAK!</button>
+
+    <!-- <script>
+     // we are targeting the elements!
+        const textInput = document.getElementById("text-input");
+        const voiceSelect = document.getElementById("voice-select"); 
+        const pitchRange = document.getElementById("pitch-range");
+        const rateRange = document.getElementById("rate-range");
+        const speakButton = document.getElementById("speak-button");
+
+        let voices = [];
+
+        function getVoicesinhtml(){
+            voices = window.speechSynthesis.getVoices();  // fetching inbuilt speechs from windows!
+           // console.log(voices);
+
+           voices.forEach(voice =>{
+            const option = document.createElement("option");
+            option.textContent = voice.name + "(" +voice.lang + ")";
+            option.setAttribute("data-lang" , voice.lang);
+            option.setAttribute("data-name" , voice.name);
+            voiceSelect.appendChild(option);
+           })
+
+
+        }
+
+        getVoicesinhtml();
+
+        // some condition 
+        if(typeof speechSynthesis !== "undefined" && speechSynthesis.onvoiceschanged !=="undefined"){
+            speechSynthesis.onvoiceschanged = getVoicesinhtml;
+        }
+        
+        speakButton.addEventListener("click", ()=>{
+            const speech = new SpeechSynthesisUtterance(textInput.value);
+            speech.pitch = pitchRange.value;
+            speech.rate = rateRange.value;
+
+            //  console.log(voices.find(voice =>{
+            //  return{
+            //     voice.name ==voiceSelect.selectedOptions[0].getAttribute("data-name")
+            //   }
+            //  }));
+
+            speech.voice = voices.find(voice =>{
+                return {
+                   voice.name == voiceSelect.selectedOptions[0].getAttribute("date-name")
+                };
+            })
+            console.log(speech)
+            window.speechSynthesis.speak(speech);
+
+        }) -->
+
+       
+
+    </script>
+
+
+
+    <script src="custum.js"></script>
+</body>
+</html>
